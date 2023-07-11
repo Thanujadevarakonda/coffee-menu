@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@500;600;700&display=swap");
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+/* header */
+.header {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    background: transparent;
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav__list {
+    display: flex;
+    
+}
+
+.nav__menu {
+    display: flex;
+}
+
+#logo {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.nav__list li {
+    list-style: none;
+    margin: 0 18px;
+    padding: 0 12px;
+
+}
+
+
+/* home*/
+#home {
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.nav__list li a {
+    
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#theme-button {
+    color: rgb(255, 255, 255);
+}
+
+.home_img {
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 640px;
+    object-fit: cover;
+}
+
+.home_container {
+    color: rgb(255, 255, 255);
+    
+    padding-top: 110px;
+}
+
+.home_data-subtitle {
+    padding: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.home_data-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+    padding-left: 2px;
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+
+.home_data-title b {
+    font-weight: 800;
+    font-family: 'Raleway', sans-serif;
+}
+
+.home_container .button {
+    padding: 16px 32px;
+    background-color: #14505c;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .5s;
+}
+
+.home_container .button:hover {
+    background-color: #113c45;
+}
+
+.floatContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.home__social {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    column-gap: 2.5rem;
+}
+
+.home__social-link {
+    font-size: 1.2rem;
+    width: max-content;
+    color: white;
+    text-decoration: none;
+}
+
+.home_info {
+    color: white;
+    display: flex;
+    width: 328px;
+    right: 1%;
+    background-color: #14505c;
+    padding: 1.5rem 1rem;
+}
+
+.home_info-overlay {
+    width: 170px;
+    overflow: hidden;
+}
+
+.home_info-overlay img {
+    width: 100%;
+    height: 100%;
+    transition: transform .1s ease;
+    cursor: pointer;
+}
+
+.home_info-overlay img:hover {
+    transform: scale(1.2);
+}
+
+.home_info_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9rem;
+}
+
+.home_info_content a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.home_info_content a i {
+    padding-left: 8px;
+}
+
+.home_info-title {
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    
+    margin-bottom: 8px;
+}
+
+/* about */
+.about_section {
+    padding: 200px 0;
+}
+
+.about_container {
+    display: flex;
+
+}
+
+.about_data {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+ .about_title {
+    color: #14505c;
+}
+
+.section_title{
+    color: #14505c;
+    text-align: center;
+}
+
+.about_data .about_description {
+    color: #1d5c69;
+    padding: 30px 0;
+    font-size: 17px;
+    font-weight: 500;
+    padding-right: 40px;
+    margin-bottom: 20px;
+}
+
+.about_data .button {
+    padding: 16px 32px;
+    background-color: #14505c;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    width: 200px;
+    font-weight: 500;
+    transition: all .5s;
+}
+
+.about_img {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.about_img-one {
+    width: 195px;
+}
+
+.about_img-two {
+    width: 250px;
+}
+
+.about_image-overlay {
+    overflow: hidden;
+}
+
+
+.about_image-overlay img{
+    transition: transform .1s ease;
+}
+.about_img-one:hover,
+.about_img-two:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+/*-experience-*/
+.experience_section{
+    padding: 0 0 200px 0;
+}
+.experience_content{
+    display: flex;
+
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px 0 ;
+    
+    justify-content: center;
+}
+
+
+.experience_data{
+    padding: 0 20px;
+}
+.experience_number{
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 7px;
+    color: #14505c;
+}
+.experience_description{
+    font-size: 14px;
+    color: #14505c;
+}
+.experience_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.experience_image-overlay{
+    position: relative;
+}
+.experience_img .experience_image-overlay .experience_img-one{
+    width: 100%;
+    width: 434px;
+}
+.experience_img .experience_image-overlay .experience_img-two{
+    width: 250px;
+    position: absolute;
+    top: -235px;
+    left: 101px;
+}
+
+
+/* VIDEO SECTION  */
+.video_description{
+    font-size: 14px;
+    padding-top: 10px;
+    color: #14505c;
+    text-align: center;
+}
+.video_content{
+    width: 100%;
+    padding-top: 42px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.video-file{
+    margin: auto;
+    width: 80%;
+}
+.video_section{
+    padding-bottom: 100px;
+}
+
+.video_button{
+    position: absolute;
+    background-color: #14505c;
+    padding: 20px 26px;
+    right: 15%;
+    bottom: -10%;
+}
+.video_button-icon{
+    background-color: #14505c;
+    color: white;
+    font-size: 24px;
+}
+
+
+/* CARDS  */
+.sectiona{
+    padding: 4.5rem 0 2.5rem;
+}
+.section_titlea{
+    font-size: 1.75rem;
+    color:hsl(190, 64%, 18%);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+
+}
+.containera{
+    max-width: 968px;
+    margin-left: 15rem;
+    margin-right: 1rem;
+}
+.grida{
+    display: grid;
+    gap: 2.6rem;
+
+}
+h1,h2,h3{
+    color: hsl(190, 24%, 95%);
+    font-weight: 600;
+    font-family: 'Raleway', 'Sans-Serif';
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+
+}
+.place_card, .place_img{
+    height: 260px;
+}
+.place_container{
+    grid-template-columns: repeat(3,max-content);
+    justify-content: center;
+}
+.place_card{
+    overflow: hidden;
+    position: relative;
+}
+.place_card:hover .place_img{
+    transform: scale(1.1);
+}
+
+.place_img{
+    transition: .3s;
+}
+.place_content, .place_title{
+    color: white;
+}
+
+.place_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem .75rem 1rem;
+}
+.place_rating {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+.place_rating_icon{
+    font-size: .813rem;
+
+}
+.place_rating_number{
+    font-size: .813rem;
+}
+.place_subtitles, .place_price{
+    display: block;
+}
+.place_title{
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+.place_subtitles{
+  font-size: .813rem;
+  margin-bottom: 1.25rem;
+}
+.place_button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .75rem 1rem ;
+}
+button,input{
+    border: none;
+    font-family: 'Open Sans','sans-serif';
+    font-size: .938rem;
+    cursor: pointer;
+}
+.button{
+    color:white;
+    background-color: hsl(190, 64%, 22%);
+    padding:-1rem, 2rem;
+    font-weight: 600; 
+    transition: .3s;
+}
+.button:hover{
+    background-color: hsl(190, 64%, 15%);
+
+}
+.button_flex{
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+
+
+
+/* SUBSCRIBE  */
+
+.subscribe_bg{
+    background-color: hsl(190, 64%, 22%);
+    padding: 2.5rem 0;
+}
+.section_title, .subscribe_description{
+    color: white;
+}
+.subscribe_description{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.subscribe_form{
+    padding: .5rem;
+    background-color: hsl(190, 24%, 97%);
+    display: flex;
+    justify-content: space-between;
+}
+.subscribe_input{
+    width: 70%;
+    padding-right: .5rem;
+    background-color: hsl(190, 24%, 97%);
+    color: hsl(190, 24%, 35%);
+    height: 3rem;
+    width: 10rem;
+}
+.subscribe_input::placeholder{
+    color: hsl(190, 24%, 35%);
+}
+
+
+/* SPONSERS  */
+
+.sponser_section{
+    padding: 100px 0;
+}
+.sponser_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.sponser_img{
+    width: 80px;
+    
+
+}
+
+
+
+
+/* Footer  */
+.footer_section{
+    padding: 100px 0;
+}
+
+.footer_content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.footer_data{
+    flex-basis: 25%;
+    color: #14505c;
+}
+.footer_title{
+    color: hsl(190, 64%, 22%);;
+    padding: 10px 0 ;
+}
+.footer_item{
+    list-style: none;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: #14505c;
+}
+.footer_social_icon{
+    padding: 10px 0 ;
+}
+.footer_social{
+    text-decoration: none;
+    color: #14505c;
+    font-size: 25px;
+    padding: 5px 5px;
+    padding-left: 0;
+}
+    </style>
+
+    <title>MAJOR PROJECT -( TRAVEL WEBSITE )</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo" id="logo">Travel</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#" class="nav__link active-link" id="home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#discover" class="nav__link">Discover</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#place" class="nav__link">Places</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Home section  -->
+        <section class="home" id="">
+            <img src="https://lh3.googleusercontent.com/pw/AIL4fc8Dz6lOHDB6MYCyfxzD1-9XpHUC29VvtXMGs5Tle_6L2X0JLysMTwUzOX6rzc3dsBqbXEKSsNzTEcNs7SUXRDw7zdCc9a8uJxyOMOYPQXakASiQXKA42lu2F41ZMlDdnHMUhL73iQLCHKmZn-qbIR7k80xZvr4DhWlaGQizTCWL-lLn_YdNsXGMdXjSuwyr7mFqKSnpMF6tq6DQlK5Eq2qq4lbDdq2xkw5sBCyVboCp4T_upijsaIw6wV3L5qsNJFixf8siTNEV1yPCUh2pz8PbKuks6zXUT0DGxNo-g2CJf0nev83luETEgMYs1MpHXaSIbIc3zhSe1Jyb8anxzyM3aEgMsAIS7MEyec8jn9BRVbjodxErLYh1hKDO0Oy75WAhZcksdKMi7kJoPr0bGYzLttgyByltlCPMYkT7D4jd-LUj0YHNb2FdxxJGQPZ-vH9aSfmbWvky4JwxSTsFPrMib10gDb5yNT7MmyTIC0V_5yoPKh-fjqkkMfbaiUtP1LX28CVlITZA4ohKNyhDfsHMIEkpFke6iCvukEI-fFjD6ZROb0H-SpOj5e7ofqSa_J0Z6F30JnoiBO5EO7TfORQpibdGQ6ZqRNMhAnx_cZ6VR-ESARElK4SOiZmdFu3XHwpx8QFTta6JvmUQ9Pi9gUCi_t5tICVLgV6i7qq637cILWpLIwdn-tEiaUuJdSZLCPgQ6-l0bt56BgDwB3mifZ51lUbIdvXtQjvzW0nCrH_UkBec7NP-RvC26d1z04MKP41eF-o5XIB_6q9fXKNp6TIYHBLM5yS69SrtJ61aJXk4sLsURglOmpU4ddavw9sjshaK-cIL8y0sK5kM652Lb22vAOErl2CTw1Cb_THtH9IfJXbgh_m124VfZDTaGa4zj09LGoHqLDVSFgfWuEMcWY3juRs=w1519-h883-s-no?authuser=0" class="home_img" />
+
+            <div class="home_container container">
+                <div class="home_data">
+                    <span class="home_data-subtitle">Discover your place</span>
+                    <h1 class="home_data-title">
+                        Explore The <br />
+                        Best
+                        <b>Beautiful <br />
+                            Beaches</b>
+                    </h1>
+                    <a href="" class="button">Explore</a>
+                </div>
+
+
+                <div class="floatContainer">
+                    <div class="home_info">
+                        <div class="home_info_content">
+                            <span class="home_info-title">5 best places to visit</span>
+                            <a>More <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="home_info-overlay">
+                            <img src="https://lh3.googleusercontent.com/pw/AIL4fc92XRprfpkM4mwj1kKouHGhUN9jTYET_tvzF0sD4KCfnBmtpbZQx5QMa8OoOAVqdu4M_umb8nGxzZxtAk2v1gR1ULltHSPVq0Oxe7sMiJL0QU_T_rSMvq1uxZx7DaLqbr4vowyi4QE4NL7gi0eDGH-z68nBP3L0F_tvhLJjNvHbFEbpswihP_RtRHQIZzqAVwtRt4Pwa8YPoYn7E0jCm-TwXpcD96rK6t4akB3EMaBPsUfUhkb0T6g5_kPHKF2MwE8twcpC2OlMNg4q5Kc8L51XYZbQ59Zo6rkvVALcTJEK5DkaiFJzGnHbjC4ksa5W1WjIKKfHSpTlpG5Xdmz70EIOq488fFS3NZGBz24SI-wtCG0I8-1b1tkPHlnWCSqeKw0R_sgwMeA4jkxA2O-FlmisBvKmra88ytM7QblzA8XV6YX41YTQsk_kO37R0fWJlPpt43AUHv65Y-QEuXhJNfdc_CWdJCmYLWtCia46X8t5hRbI-Kb_sIUi0vZgAnbWXkmWEUs-u05yCoiIoLfGDSfDFGXV8bhd9aFAXvl8TtqMC72i8NxV-FusapHllZMAyS01vSHljKAzIUK-6Pd5POCHlQTdsAerbnjXPyhgJ-DwLrov4RU4nyQQWVdyW3pDkABE8D6vNGZ06HTwubtdsN0qNADCBnHiY2echpntaLgkSZogvp687HZtStpkvA0XgKOswJpQbISjtoWOnKQEiFVJ01iCyv5SiXGynnzHu7GzhYm3T4Vv1-XldtRbaVNrcU_O8-auHCBpbd2am4gCv8hdSrsuyE6JPcc29gMFqkFsc9rsJPqq_qaGPDnTtVjTsgGxW6Wj1rxlbfl7sXDSvgP1lXVoAHhYuNVgOgHbNw_eoL6ZnZGW6nV-eMWtxeZz9gNag0RTX0Yu0OjrsICqcRnMdJA=w640-h426-s-no?authuser=0" />
+                        </div>
+                    </div>
+                </div>
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- AboUT SECTION  -->
+        <section class="about_section">
+            <div class="about_container container">
+                <div class="about_data">
+                    <h2 class=" about_title">More Information <br>
+                        About The Best Beaches</h2>
+                    <p class="about_description">You can find the most beautiful and pleasant places at the best prices
+                        with special discounts, you choose the place we will guide you all the way to wait, get your
+                        place now.</p>
+                    <a href="#" class="button">Reserve a place </a>
+                </div>
+                <div class="about_img">
+                    <div class="about_image-overlay">
+                        <img class="about_img-one" src="https://lh3.googleusercontent.com/pw/AIL4fc_X4ZJJKG0xsO0PF7aYYEcSaTHgEvzU1KeA7cHfxZ-sdyYarH-KZ2XofU8GidpVUzEyo1hVRv1ZvDYdOaehe_x9yy0hSv_iAfvMk4UbI4eVrrqOc-Zr1v2y5B9dODFiikZ_0fahCLRR-5DUXY9W6r4wljeQ0OQV53CImcAbyvRvzCsNhm1pplZ7pWuz2SERbooOb8B2r2Pnp4lwvF66m47Qve0p6pEylYnLxo0Cyy1AzWGo9vZteskYrdl6aTJh_Ym5-edEmAoddi-wDPyMGMHyuRwk_QuXeKoVWyL6bI35djz3G8C1sLaoJu2c82idyFSAIKYJprfGykhGA0ppo9SeZ9P4yJUVUB_Ad2zY93pJIhQW7ohXHMAXWqhb_p2lgROceyiXZpEPYAtuPzvNZJkX41GSWdGC1B16hoHgAJ3N4RJAOkRaJTGDGrcO37bEGp7x57ABdCl8YZ2fN2IKUw4OEKMN6PaejiDVvGO7LPk7Etek7rIeYjaMbwDeEGC5w2Q6i3tDqJIAunXGPMM4KvSvPIFQUo8zxx9TR1b5PUMQ0mbl5cLPOBQ1-6sWNX_QTi6BxPJhASIqbkB_YgV7XKusZGMZpzBBvuOABxdwZtmYlx4CpJoKAwYcOpYr7E6V4K5XxihOFjcoYwk6tYodGBo7a8MdyxyUJ_h-frhjAhUPjV0EDmx3LQNOInmvrprxxyF-gmIT58F7hwoFGafSCVqZMjfy4I2A-wcShCrzzxoTfeP-mI464xH6_xssA3fUXrOlOdPCUvOn82SqTStct-uhxdozVJOc2_pKpBozUc-QZolMYn1ZsbgPducn_vPc5LjT_RrmvoyOn-CUZAvdWaRc62D75XDPWavLJiyTQVF8XioqJ5W7XOzF1DEOtH7PeqnOJDjpfOGEhK7fI0bAa4e6Lzg=w400-h600-s-no?authuser=0">
+                    </div>
+                    <div class="about_image-overlay">
+                        <img class="about_img-two" src="https://lh3.googleusercontent.com/pw/AIL4fc_0oWHQuzCdijtXagen3fs_Idwm6fOSyf8xDyIHJGXCltGH7bNx1ggpVYumC-0W2mNjD3UlxbUm_2NNDtl80C1lmricOyKLykN4ZqnxJYQJRFV9MSh1VFrsEYzN-GiOy0qQjS3D_wW__s2zPrhh79OxYNv-C3Jb-WEaCd8d_Emf5BK3PgfA_qmpl3RgIawO7XG7Wz9qxNpt3JSFpza32QcIdM3Sxivxm2peOO5qQGPU4Fc-HVrDMsG-PxHQE9kwwuh1WXcYSYYERD2Gcfyy9XBq3d5sFvMjzJ_gHvmQ31Ig32RQCAIqastMj4EB_P37iWQ50-NxOPRop5yJvPMd0-HvwnupoFayOU-R1DnL0u92frc28bt9QDS1duYu3IcJlsCrcHU-j0xz1qjJj68etTvi1MTOXFCm3HliUZnXaWWX9fNrJUuqklDjFosv7bdH5iy-pFpRUcJ10WP-m60pnSDej6yd67lQ_sjoHF1onkz7behb87eApQqq25ts7XuVQJ121_ohY1W9qCzbJpjon0pm4WFBRsmjQzf684f4_JiqNB7_Y9VKaUVRnUlLwoC-3oxwD85UiH1vykxV8UWJiRXxyhmAXY_FM_u3mH4kp73WhF499PPccpBz8HMKqd3yxPSuK9zkswY4o5de7rzNYj_JVHZBqSRJOrs791hmqgVTinnLYnLg41P0ydY3kcr52VPY9ynVcpnJPNQYRt-v_8ZspWxrNL0PyrbJEmCly9FVCqqysX7ZqPBsVoYpDDo_2uPlStSELNX2i7QHhjOULUY7voD8VadePHuIZN8RJhDkHDbVjBR9_Jr93xo0MQ-SUSabalqIuKWAs1AItD6Z75tDV2YxAm1ix5PE56765BjVoHKh10l8Be1UXiKWfuMSoW2r7OrqM9bwzLFi15YF7_nfAj0=w400-h600-s-no?authuser=0"></div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Discover  -->
+
+
+
+        <!-- EXPERIENCE SECTION  -->
+        <section class="experience_section">
+            <h2 class="section_titlea">With Our Experience <br>
+                We Will Serve You</h2>
+            <div class="experience_container container">
+                <div class="experience_content">
+                    <div class="experience_data">
+                        <h2 class="experience_number">20</h2>
+                        <span class="experience_description">Year <br>Experience</span>
+                    </div>
+                    <div class="experience_data">
+                        <h2 class="experience_number">75</h2>
+                        <span class="experience_description">Complete<br>
+                            tours</span>
+                    </div>
+                    <div class="experience_data">
+                        <h2 class="experience_number">650+</h2>
+                        <span class="experience_description">Tourist<br>
+                            destination</span>
+                    </div>
+                </div>
+
+
+                <div class="experience_img">
+                    <div class="experience_image-overlay">
+                        <img class="experience_img-one" src="https://lh3.googleusercontent.com/pw/AIL4fc84tz_O5PXv7QZ9_khNIN67zUtX-MnsZdimmP6l1XEQEyDAAABd3u1KRh2ZmLC5l8BnTRszPBI0CpDCnLaTmb9F-FnM87t3XH_TQQV76TCr39akdayOldnLFSRFybqOS3joAv7V9Z8pS8ArR5YGZn74JxeUqy8g6B4YKMUf24mbHDEyiU86DQhs6w8he_5j6PxR8b41eNU_A1wq1r8U80M088WTCzpcBpNRHvyKIneWw93FoMGab-uPZe6zUxkJvv9FJPvWgg6sAaU0vR9s2aBApKalPdliDyko7hdblh5sz0vVGZl5iY3uJEU4ys8JRTrE-P0NenFOhoLRp-2FMbnIKhTvVuIq7CMbnsWg4YrVC2eIP_oi8nAlQSX2YKmhKY7q82JKkZvMkhvp_-Py29JKn2thk6TB7Kpu6o1PXHftFH8FshU8Z9P0el-H39Hr6QHZKFw5SLIvTszvjbcO-Zzgnu186yd9ZbPecno3CilY_yRwZrFkzj3b_PoaCniVGaMQiEdhzuLASOJHV93TWw8kqeK3fmmNRSV_xxyIndrillm0FqNF3m4mAG8ji9kK9kXqsWw4D0Y3fFzwQXliyY9PyBkf25DJVB4MiG9tz5-avahLKLlGvOhRFtP3hkjTWi6nKdx5DrddrxuW8-dBdL22mOErZii-18RJ646NjKQKgMP_YrD3X02wOpLruMpSAGiVrlk94LkxpGhR3rLPGAWB6EAu_-XLToMPEGmhRvvHBTZ3JTBzVwAfHCes4EMSFWvJB2j9uAU05BYOVue4yBAzuMhLeAjkii5uNdkDF785oBDVBphkFPhx5D6cGN-JZ8FSAt2uPTS8toqpdcSch7m3DiR_ISApKf5ofDBS0hVQvvFju-TCQzv4yoQIs9lad7U78U3TinBqOg2kjaz1UMSDYzg=w600-h400-s-no?authuser=0">
+                    </div>
+                    <div class="experience_image-overlay"><img class="https://lh3.googleusercontent.com/pw/AIL4fc91TORPjgfh_XpIRc2d-YbpLvaMRHa6SCTIMr8aVVYhfkeTXTSkhQiY6uQCQ2LbGIj7OYIn2s3iHaIlf2e9lmcvNOJElUs5Qk8zvoL1-UrOaDkxCENYBwYKRA17Iok9ylqQBBhgU-vx5jy8OMKDwlUWjeD3oeb-hNZe5iCgmcx4u6BKcYl8WJDKWfnmi4Xf4KiTyRuCh5-290zquZDb1rpjORR55yR9H_FArrmSRbeVgdazXxfgTbmkvOdhR2Y79HuI8tuiJOtiXtP4VPbfr_hyWmsEoGEZ5TPNlb_Br_UzZEft0bll8fCxc-YJaAK7sJt7izgwQKTcOaZu4yVomVPXqqCPkXqQjtu8w_UNHO7aFdS6-hzn7bzeSS0Q5ZSn6N5PAoEy8dqBRSCcYiV7x-9MdoG07m1QBh7nVDzeZu8-rsMwptUyk4ykd1r9EoD9usvKOAx2IaYRpLSLBq1CkvyRA7zBAQWsntQ9Rva2Y5I3rmxIQaiOhXL5WTjJ65N9cq3vCYfLinSfU5iWc6hi43vY-cSVU5BRBJVDLLujydP_cmGmY_ibsKeeWBIIsPO1y0x4D4MhmrV_htGQpg-JsTQ2NkSnxlR5eVFvPpr-mKnct-nqIYZyabUzDdmmXUW6ykPsVpEWdGrVNogIwEMlkpzkLAsiNRi1uoqMbFiq4a2RGWsFtIl1ebSXzEJ5aqdYnI3l33PedFDOwk6dr7Mg7GYvKrLTpWo8_VYh5TcLqtTL0G_aIuVtXMpSwPjc__XhBQ-6eSPwTRHqz-meMgJcAyGCvj_0IBD__c6gh1Y7nr7ckoXhlOqx0txpCW7Obxm34V6WUNKzpLS_8C1RQeXa8jAsMhDRSPQ0DtuQwbv3a_aJAdhslSPt9O0eeZzny0h4xYRS3NHU6As3JtavNmAveTPPjZw=w400-h600-s-no?authuser=0">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION  -->
+        <section class="video_section">
+            <h2 class="section_titlea">Video Tour</h2>
+            <div class="video_container container">
+                <p class="video_description">
+                    Find out more with our video of the most beautiful and <br>pleasant places for you and your family.
+                </p>
+                <div class="video_content">
+                    <video class="video-file">
+                        <source src="./assets/video/video.mp4" type="video/mp4" />
+                    </video>
+                    <div class="video_button">
+                        <i class="ri-play-line video_button-icon"></i></div>
+                </div>
+            </div>
+        </section>
+
+
+        
+            <!-- cards  -->
+               <section class="place section" id="place">
+                <h2 class="section_titlea">Choose your place</h2>
+                <div class="place_container containera grida">
+                    <!-- card1  -->
+                        <div class="place_card">
+                            <img src="https://lh3.googleusercontent.com/pw/AIL4fc9HdQWF1yXxI3R4MMpZskNRs6r9l25uAjkC6df_N4D1Q-CJFY1u1Ic99hpyX8I0jljHE5NRu3nb1umOYHT7clFZufxbKbZIbg_ZQKJm_04qV4JnA2Fj5RuMdJ0045xz6uXh3jXwxj_o8z5ioO-xQJ4z7vRCVWNOAom76DRv96LPj4dHmWlVN7d3Rzxj-v4fu1QXGSacIy7F1OerYPwKB-KMviSXnS2gRSx_vRb-hQpr6wTgt9tJwfsKYNnrkuiqfgYNHeQFRp23sKSEHZ004TrB8-5qWqBFM8jv-UzcpMThzaE5ey4KmKyYuPYtnt_d5jHyQ7bd7_u0LcwpcBAlRuJRaAJhXgX7ATUMh1JezRCaG6IGorjTDNxDP-2yFEqNJdFTiPlhgyowHrd-pU0M8oALKq6MqXCEYHD-dR4Ge8g8KUWJHeg50ZQvhqjg9XwRuyvnZ7ngiY9m4p38NA5pVq6D1gdJ1hir3TqNUYdGbKj1-VWPvbW4EosNlUrE211psacu50gXf-SD0Qn-MSoENW5bqWT4bGrt-VqV9YwDCICLtVEuC0DBzaCo3H3FFrKK9hLVV8sA_s2nBttdN_4Gt2FSGUmEDJW-JUfpq3fVn3ygXt5gCdYPZd4vbu4kuq6OrhLQzVW4Hhczr49-KY1QwDsiTKNIiYWRcmEOE5Ks7QJzPI5XolEFT5XUNRVYUuEGQUZDKzaMKY4XwyiQz4sm7xkS0ToFZOux-RoHYyKmZxR18PqH2lSjeoOhavCrfz43XllkqHV3TVUGPpa5dXe8CdB5_gzXqtAXISoLkxGPJIIp54CbAF8Xc1kvmoQY-gYpvVk3e2wSoipdulFTN5UqmyZiiod0jvP8-TTN8Z9Ce7YN1rPc2V8gbdeSPhac7iYJSta8txI81ebCJErknyHZFBbAtFo=w240-h360-s-no?authuser=0" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.8</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Bali</h3>
+                                    <span class="place_subtitle">Indonesia</span>
+                                    <span class="place_price">$2499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                
+                            <!-- card 2  -->
+                        <div class="place_card">
+                            <img src="https://lh3.googleusercontent.com/pw/AIL4fc_RgD_R0Zad5WZ0mTIonoF7gTwMqmp9_eptCAbtQpWYPSJIbEenki8xghEa2HpN01LSHUH9nYWACSpJCtxAuWWt5SJNT4atW2WerOcY8HKF6hVJULWs3NMpM54n7lWU3MBHkQUJ6NEn0tUfmI03y8kzqoyMj1dp9rR_12X70X0HzCtLoGC2mvKfQwIQu1oXh6pD2HdFxhXSmSGKcV15N3p3EFBDkQwomvf2tqYNaETbT2qoEFXp01ef2nE6dAPqmNGVIsq7wQjdrJLOunmyFKwyG9HfAdZYYnUWBE6rv5SoZv1r_JpyZKcvnmSf0VzpiwOlKLra_3-Ym4OjqXy0Y_8MUAt3-0N4ysJRDnzQ8Cl8cZeBr3d3e0q8Zy-r6MetuqJo_vQmftpE6fQJQ0EqoWxd_f22UkhXmnSW1DAGJp-Lqgs0IxEbLQawyAa0RAJtRsg6xrFabnFDVMERg3KhS6Rp9n5rhcg4hvglKzGMQFWJXHokzdzDwT5yuqZwrGC0FF5yq4s_5Obq1FaUjoFOZ18aAf_kbocoPo-8EghPMAVw2C2AePYoCngk2Mvse7pkHiJdUxmA-e1nYc7qG070Z6ldAIoy9ZIcyD1OUkq2ZSb2yQfe6BjJj2oYVm9Re6WX7ZqAVCLt6i7PW7R0cBm3ZrhZlryAgRu8mmTTKyzIwjbauwr6rDYpfDz_loj6zFHZ4D1oiUnC5r8YYXsH8smGtTEB2iEsKViYOlMpAh_NLjRoS2HhWbLkTXEivqN0QYpGTW55iKfjCBSKhMNsdyGPsVuMIvFme0Df_9az5If7YBlpJjLRpLVm_ae1nioYLD6r7E1fZ6k6aT6Cbz2hSXk2o7-wUtt4l5_VoXW3HjR6xIxJ_pi2ds437HeNfSZNDolNUT4NaPG8bO8MSR0rWTo0ztOMRUE=w240-h360-s-no?authuser=0" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">5.0</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Bora Bora</h3>
+                                    <span class="place_subtitle">Polinesia</span>
+                                    <span class="place_price">$1599</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                
+                             <!-- card 3  -->
+                        <div class="place_card">
+                            <img src="https://lh3.googleusercontent.com/pw/AIL4fc-5ofZaRVFXxSbAKGR5RLRbMpJefez_bFyQo1Q-KmycnH7hI4v2ZasceGDFirZwerO2NhKW1-p4hb8ZH84yI1hdk_mDaBGA5ewRc3hp9D-rWRjiyDMuONHA2TAjsaUMuwfTTl09xjeXxG95LWtjJt_loY0OZkUlAwtyElBJYT4Suc_rdqfmZkEl5qd3C1V5ki1wGPxQI9IsUU6hkhX_-68xwSNrLtz6rI-lwUnVFPdzc8ujHwMDIwnlg1TU4TbvO2MrZJZSwyO1DHWMwfHOkMs20ifytJCJGsybg3BhRDlXki6uuAjhtgVH3B78df0qKYpFYe3LgRlBFglJhnfdGiv3HqkYjAe69I2CEy9EpyoLwdf43ZeLE4DybHxqMidUxjtD9mAFVabqrPAtHwS_z_3M3mfJyKMMD0UMcL56s5Wsmc2dwGc7s-jvIZClAZaaRBPPqrwidT6qWigvlg4B1RrLLeEUpO5dWus_RoHixeCw4cYmdOMzjGsG-ZhZ9uSxXvYwGj6ReQlwIMykjnuiV9-2oEgPKN1Ocv5k7wEilHVFwvHU8h5Oyx8QsDXxZbj4iLu_Q6URWVfpk0iUi6yiiTcVSvq5aNwA90roOsEM5eiJ4nN4Sn3IrTqnpvCQTKxIQMFAPBGRDjk5ZXEX9_AMDHzrOVGU6rx3wVqNPhMgfB_HJ1P1wuR08aV_o55tFuWPK8BERUxSl8iRmOGcqzIaEaYpQ4TEu-sZVR4BqyX2ba4lE3SVzCST1XdJqJ9caEYmO8coqVdBm40QkW3Q2g6yOmnvlPQdWaqKBPl2llSsr3c9LgWrC58naLLVrONUN4Q2_AmmlskjlBSm2VkKrWZCDYWKd1L-WvXXc6AcUjhHmaXJ_v3pLYlJ0phw3t7wfc0VnIstGa11-qoCi9gzL60c5BQzaF0=w240-h360-s-no?authuser=0" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.9</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Huwali</h3>
+                                    <span class="place_subtitle">EE.UU</span>
+                                    <span class="place_price">$3499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                                 
+                              <!-- card4  -->
+                        <div class="place_card">
+                            <img src="https://lh3.googleusercontent.com/pw/AIL4fc_Ac3EqeqWtNmfFlgGNJij42ec68g4nc0gsgtesXP4rvzrzFXyRuzmmzBO5r0PF3kchE1MDCaRNwFXlTh7np74kFpbwBrmkWRWIiDzPIHxHUpt-EofAbhbnekJiZLTM22YJKbO3p-B_DCDVr5enF9nxDzRPds8hA0MLYyrGJZo7uB17ceNTUo9TcRu5reWLLdWlyMkSEkSAN36Erud0AqIShovTPOj7XcU4vA6HVi43pzgkYkM4Q5DxG_i-AnofBSNCIEZtDDAv-m2UlrO8VGu4or1dOPDuJR5nCp_u3H6pvm6PwPEodXGf1wfKatQvncyArMMHoVkn-LoJrR_k9A7fkfPsyE26H5UHoEjg1BXIJv_GSNG9a0D5vGvZCifO9o3jHSDECstfkQIDVCgW4sG8T3Xw54RSGquEyCbehuotC8hkRQ73b9CegO_5CVZdEOjvxCfEcVPJgwrL_dBVK9lbSSRCIzZvYyQUrWe3cool0Rl6BHqGpHqvKeTIP0qHd5bb3KsdTHYW2Es7aigDfsW0UMy8GD32j55dnQca3HJxNvDJCov2dI-puloQYMIqc3bvy8yuo-CosS4H3e7IGPplDQOUx03PVz8DhVQj6IHW1gJ-SCVhGOeC7kzyFhZmToJWVii3ISpR6Un1jpavM2k7NMXcRZjDaZzdbQDRQZISOsOFTynbai7uEuhQLhwYKyP4d87bqhOc9K7uu25rub1iWy1rGprILSHC0Eja3Un_5zZYzEagkFs-1ESTAVZYrBVzcgFAKiHLOOSAZ1qurJJt6ZsGRlET_MRBsuHA6azhoCCqLh-_kVdTAOb5F9F7CM0mgtTSBMeeQTuJjlA1bfmA7hIyvEAdzx753eyLkq9U3uwsgSFShN2idyRXpI_U3tZMwtRQfOO-VkkuVRx2Xp6EAkk=w240-h360-s-no?authuser=0" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.8</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Whiteheaven</h3>
+                                    <span class="place_subtitle">Australia</span>
+                                    <span class="place_price">$2499</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                
+                             <!-- card 5  -->
+                        <div class="place_card">
+                            <img src="https://lh3.googleusercontent.com/pw/AIL4fc-FzgEALITnAjej4G_4vi3sHk2lt5oidtdO0NUs38jeVKnACp5dlJ794mNMKT8eysRcdKWMzOwrbe2Ed7gDfMtaJTMVFtREfOmu2zNjLrXRkFL9j8gmT4g1wNVrU9NeWKV7Et23QatB7acDiztyzLIb0jbauSgfTN7ArRNzEjUARNB7l5rAYuhrZbvDdyGxMJNm4HBXXDgCHzhX9dp3x6Fb6DnmoLaOS82MiAkyWWy7GAq-X31j_CqzWlUqsBb9BXHtOIHpfDZHfeBsQieUHT_5p1qRqDrF5O6WuoHH8aTqbqPVle5HsNgIOMwheajmQUQHhHECnFc_zlCY4TcFNoHqvBYAIa96dnCTEF2W9aGF6gEHAQcQUztG9-LHwVmn2jNJSmWkTJIU9a-avY4PV9CktCO9JJbcMMDcOBsyBg8fyrTObQCLykRnh6dDW1FC57pP00Bh0UOIPr9UYI1ondx7rge-PRTi2tVP4F5ti379qCuYRuUQTFlMCVI_e3tB8KA41xrpJp3v4HZxbeQqzNazdAn6HJGhGjf7iKkrRbrdQPdOirbisKmweijuXtMJJug0W2FcGAYwj1jVZsrQvhOf_9bz6o91Tbw9pd7r0m41qtCBD-hoCdmI_QH7L-NCM_rFRtB1AiMGUA1Gvz5sAr237US5SoK2MDa6O2zQ6DQryCzZHwNW7Ea1UXkXRVmYw4EMKKYmVKau9xFscB8G8veucF8FV19jBzdT4U56rh2cxspu2jLqh27eujthp_6wSQEUrNmnLx4bXfi--KHG4UUgNsfSzyn9wgZEjfzqwU9uY0WEjPv386VJky6jkL5VmRs4QRex6VsIGs9CUG81mXKZbtzkCYHQyVe0S5g-Iwa4yVgiPBxwNqfQQ60F2RRHnkSN5qGUFlo4JahfW-Fi_x1nmm8=w240-h360-s-no?authuser=0" alt="" class="place_img">
+                            <div class="place_content">
+                                <span class="place_rating">
+                                    <i class="ri-star-line place_rating_icon"></i>
+                                    <span class="place_rating_number">4.8</span>
+                                </span>
+
+                                <div class="place_data">
+                                    <h3 class="place_title">Hvar</h3>
+                                    <span class="place_subtitle">Croacha</span>
+                                    <span class="place_price">$1999</span>
+                                </div>
+                            </div>
+
+                            <button class="button button_flex place_button">
+                                <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </div>
+                </div>
+            </section>
+
+
+         <!-- Subscribe   -->
+         <section class="subscribe sectiona">
+            <div class="subscribe_bg containera">
+              <div class="subscribe_container containera">
+
+
+                <h2 class="section_title subscribe_title ">Subscribe Our <br > Newsletter</h2>
+                <p class="subscribe_description">Subscribe to our newsletter and get a special 30% discount</p>
+
+
+                <form action="" class="subscribe_form">
+                <input type="email" name="" placeholder="Enter Your Email" id="" class="subscribe_input">
+                <button class="button btn">Subscribe
+                </button>
+                </form>
+              </div>
+            </div>
+        </section>
+
+
+
+        <!-- Sponsers   -->
+        <section class="sponser_section">
+            <div class="sponser_container container">
+                <div class="sponser_content"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWMAAACOCAMAAADTsZk7AAAATlBMVEX///+enp6ampqcnJygoKCYmJj7+/ve3t74+PjOzs709PTt7e3X19ezs7Ojo6Px8fHn5+e6urrExMSqqqrLy8vAwMDi4uK3t7fT09Ourq5vxf9RAAAPRElEQVR4nO1d6ZqiOhDtLCC7CAjy/i86QCp7gGBr62jOj3u/aTCEQ1GpNfz8BAQEBAQEBAS8CNmpK8d2LJsif/VUPhNJURJMCEKIEIzbNHv1hD4PRYVnfgUw6uJXz+mzkI0YUaQDV/Wrp/VJqCkxGUaUouj26ol9Dk7YJBgQNa+e2qegFxRPi90kv9PSB4qD4vTVk/sMZKAmKCJjWp+zLC8GxLUz7l89vY/ACPYEHuUad75EXC0nL5zapyAFTYF13XtizFNSvmheH4SMS7GpeWu+7p1eMq9PwoWwxa2zjvSLPUdR9YJZfRRqZhg7NULHtAgJtsXvUIKmcEYnWqaSq7Ds/QZgGjs0xYw62joa4IeSbKrcARbEEIO7HycQ1GLleI6Ztg4u9f1gChe1qyc0zOpAQSPfi1NEN8V48vfAEbn+4aw+CxWzzcaNUxqmLdx2R8AuIKS5GfaBgFEQ5DtR7WnjGUwjI3z+ixnVReGbe0lvC6b/PTgldoaRb7cHhBwLxl60PVTydxq5IJjgyM+tTDBZgHH04PX4FBEYekuH+iHeNSoYOvYoyLPLAeJrhCilFYoGD8lMCAU8nGNSoWVg9PuIY+GhjWfELJv6dEGG1dWOsrpnJZLoD+eYz+MBUd3Wd6C/EeQaU5m23b/Uf8ExiHG0v8Yk6C9Miw5Lisll9/T/gmOwjQePU1mMkz5XkFsk5JhuWuwM/wPHTIwp9jGVkopp5H3p+gW08oN2d9X7Hzim/mIsUn5PtZFbhWKPu/sPOAZtTPws/uSAYrkXjSLIn6GPD5L2B4Lc84K7yTL1ePTvz3GxjOOnjWcklK1FzxTkqxBk7GHBvD3H8SLGRxwZEOSnmhYDxKqJj5/39hyDURH5MxZTX0X5CzRVhDGuvLKH785x7O3iSfyFIP8k/a2o/Sh7d465i3eErxiu+y5x5Hfn+LA2nvEXNvIBvDnHxZKM9jcqGCbT4k/Cb554c44h/XHUDnsvQX5vjiGLR9xx4+x8PmdO24k7e/eaFue+SLsuPeV354ay063rbqd6HsDiOK6no016qr1kIM77aazu1ttrksVxUs8T916NZ1SrDylPy3bxTaqxcSgSCL/dlaKumxFNdtmcwSHVZbmxvEsXNJBbSlL4QwedPgn7d5d2y/n9hUZ4yUbN0mFwXDftMvz0H9o6Jp83bCw21LmrEDsZk/ZiCJvB8amkMDCuSs+mxdVkdNES0aE3jUk787Hdr5H7ljVXcpAy+4lnW3i5y4gJdhYR/hd25Txit4ZwFf+cWzE5PBdEc44nxzv5yUqkhu0Iqcya6YJfjU5XvuqTMXrkNI77SjuVkMHnNQHb2IzQFsjsbSJWKWEHdbQHBTkfMVKb/5ZHVYtgJsXAsZgA5RzzX1VxodyqxvH085+emr2FFI86F4W4WpJTop87O++K/lI57jCiVDuXkGZXZbAWBGqkP5IyQjZwpWurBJJOx6rfbrMAUoOEaRARkd/lmNKrOj2DY9LZnW8TF3pvoeAYNeZMltm0Um4Ex6gdiOvcai8DOrLzdDE+t67B5vP0Ki0Wf6T0iCAPSzzNvDEqhUlwHAnWgWMhe8szEkMYHE8jUesRzg2cqk6TcmyfPf+bVELuJceIWOMuLyHebg3t2QB6TUVdyZuZlY4ypF4KxwR5khx/isu19ko5a5vjWOfYPF/jeGNcJbZU7E2DVPxkheM1bHctlmxqWk1FJmWKRNVYjhWWClRfGxumkf37ycq96T6RY9UF2OVYBlQ9OEZoQ5J5YbxGnMjy4LFgWiA5DWIV1/iEJijvwvoG22+bxcUBjufyHeTJsdZIZHNMiDECzr05nhTGupMMYqWJ8Q0uT1qV+fPA/6z5HFD95inIfaQpYoJRVc2WKVINAT+O5xWdtuUwvWVRYXFMYWyKF3VLORMiXqBwPB+djOihGcZKNC0rN6pxPJ+L6TQwwYY1ssZA7qg3jrkavhr+1w0G1UwQVo+8p/X50EoedJpl2/Xn6RpZf6009jw4ppOZ2tQwwTwzOJ6ora799Nc467vJjhaLGhXSVCjr5yRNN/a+xvUgCaWgkXU5xm06+3dJ3l8pqeSR1VqmAS6sspnC6297FgU0Kmg2yBWSFT4cpwqVk8Ujr5qkiqnhJcfRxbBlNDkmqr/USyOJUi5OGsfq5iedYt8wYVI51t7tLFXto8jtjOSu7g+wKVxVI6AYiDpaThxjuJEojz0yHqFiLfpwTKxeV4VjYpjxP9KapgiEU7HdjLOFDcz3OFA4xsa7fVa8PuqOqbGWUr2Jqd6I18egRTRLZUD2IG70kjS73lU+gF2OJwvYbieW9rFjKikW6gI6kSXH1JC/s9hHAhSy5NiOGsQDkdN23fOZHdd1KVMVK2E8thzqygLu3EOQL2I+Ls8wExsL7Muxw+lRfGmHR3SVPDFxk2uedafCvAQSJMeOdzvmroTln8GFYVLaH9mrgt195wmbmd5nOjhMbBcyqbyq2D6ceHNMkaPRVeHYscLHlbz48gg2OL7ygYBTGa9w6c9aKjDHYdbZYeyswoPCK5YIGAaaIuE29t52AFJVOGU+sWJC6xxvyDF1x+hlDIn5AoJj+429iZGYLbATo7+I06ktOTx0oh0Bjte069Ul5eOWelGuJ1SFS4yPyDFF9hq+kwdJxDvN/JANjiG8IF6XHY5BxGaT3PJDuMTqqhHMhDW+GhfHMKm9gqmLYMFZ6fpcjnnQgC9cGxzXhkra4Tjh13W8yWAHGx2j7D5Wa6ycHPMQ9E5CcITYxsreDE/m+KaTusnxITmen55L6863xIwZ0z1hcnyQY9ZlvVdm1MJUVjT3kzmW26ktb5EHx8iT4wvn2Ao/wnMlxmyhxXHNSHBzzHxkupM9laEmZ0z7zzhe7s1DV/hyfBVayOR4JanM1wbnaMKyM0niLVGbua2v4xg2UbDWKQjbrOWa4QmYt8gL5jazp5Ljd9cVxziWrpXBMdyw/SundcYBvpjdncE1z1aIc+RuAHWGqJ7MsYj1eKx5xzge+ayMNQ/0uqP8ilngKxLJhMFxLV4qu5U9lc/bqe2fzPHIDzP1+DiOMzErQzCZtehyDnsIuruGAxPXlfWA7o2tWL2wntxnPZfjTORfdn2Qgxwr+7/q7i8TKddueLDoOVshubQ6jkH2dCt5KHdKdUb0D/jSd3B8E/GKXV/6IMejuLDuvl42wjjDurKAR+Z0tGF13Wiky8TzdsV0HsexKyaUtDIFsBx+GMe9rPTQDvMEkTMceYKaCcdMoRbDqavPO7s9/SjRb3dx3aN0BXa4QoPI05mxzQMcu2QykZpCv/XOEZs3J+t4nyGWsdJRDQxudN3KyVI7kyUV5i85po4NpRollcGM87s4tlMd6vtB1Fc4QY7YvMSVKWv7obnSJhI5VHGuFyapuSZc6kT0B/J5OxxbxVHJIPbWF6HnezimVtVcXSlbymvuXIo3C09cyeoZeylo2H5vIzIkLYs5+1jI62eNknP/ra6YoeRM46JV8tlWzvSIHM/Jv0JK61krlYs0tw3c6NW6E7ZSUnP54j7jmnnGt5FcjwzFrcIkwtWlqPM8r09XpBL0e46nsemlyNnYal2BzPXdx/E8uarpl5HTQVa2UnPvHz78anCBF9brAgt3uOFmtCyMvBEZOinllnPhHsYELwU6VLuN33NM6Vw8vlwAqYNHVg3LUY5ZbRJevk6jzlq3ZiC2sEEFONq6MuFB7vUaTd6CtuGHPKQWy0NXOMdVvad7OV4bWl+Gajb1reZFHjC6Ov624S1DjnZzH6tyl4rncUyx5POxHJvv/MCWps3sGzOEtaA7rxnbKjWGDKHbDwfsk/wsjrW+68dybEQXYHu27d2vaiiwkvYbGHTbhbYQ4N8cOx7sjxSxm30QxxQh1wWm11ltbb+PY+IYeZqNyUqx4Q9LXI3wg9iKfrvP67oVtOOYTUejdH3ela2zODZjSDko8x2OSROZTRtLGb1GxD05U9RezEL6pSbU6lWA0NnO3n/Q6cG1NmhauvdJBfCHd55EPRus+lo9B6yteIXNsZCcLY6jnxMhsnyH/SJq9fXnrrz0sOypoT8+El2sfi92cVfcRJ8DWFnMSAbTeH9LEOi83usKPunfjSP44uwdw+7esem/NscJnE3mnyelMf5671hkOf81vwxmz/bEe9iiuXdsVLt9phNL23bIVwPHBiBkt+StRYh0t5KbrXoe1ch9UxHM9sec/IXlmdQptDzCOxZ30AOZwi6lCf93mjomIg4ug/XXubx7+boimrwG62zecJl21quZiZHYdc9iHqyKa27eZDOn7c1lnRW+JJxBEKaXGJxoFO2XDbKiGb+uyLzvrsPQHWmJPYK4vl2HsplcyUePfO5vTXlpbvWKjcWS9ztbwy7gwQV6BpH2aYyGKP53f24INKtPQx3fzod3OXl9FaRVtPi3Ar4U5MMBWx5lHsxrh2XmYnz3R1oWjumOcQWQCTjk/H7T6viBY2+O1R4Z3/0xhsAxd+A89aXMwPmyxtbH79bHi11BN+LoGkRGcLdInqMKdgXYxz622wwZJPNsJGX+75d/aoj5E54kyOoppQ1+EyzK7NOs98GIt/s9NFyVwCklrY8kQ+r6PbbKehmu3o4e37eVh+DGfZJBf++2kX04wOjdDwpxKcaDP8nNas3hd6HyMxT4VgpRI+Kcyv4vbkBF25vsqvdC3Fy9oiYS3iK+9I4Lkne+01FuN559D2IWgdh03HoeB4Io5Y0bGJtBUUiZHtp+9kPBG2TWg7xi8y5xjkjNYCuzYo773G2n/xeUkBC9uE3efORNgMomEyKpZadtADy44b9/0ycj43S1jrc6acTeRVomt5b1vYPrZxeg2C8E+vngmVd7H8Os4ZrYagfNoQ50rlO7mCzfKGjs6OvtNg6RBCX4KuVO22GMtFYT3iBCnSTiuxzNyBvK9YTPV9i+BcqWoBiVza0oukuLlZi8c0VUOpMQxtUw/e7WDDSSaiRQrKBHSryHlRMw7lh948rCVreiJ57/Tu48Z9ckfTvOoyK1BvB1zTaIU60cWwOhYbkzkRJnQSKJXHaDwLnBzodDotUH881IHHRh22awf4awKcw7D+abkdxGxDXqUrY0Fl7CeBqWSir+O9J2Xx8G2kJ2mvfynFBe0t5/r+il0qmdftYOTREI9kCcJPdkkqefBR0cEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBBwCP8A8ZGhXtrx5U0AAAAASUVORK5CYII="  class="sponser_img"></div> 
+
+                <div class="sponser_content"><img src="data:image/png;base64,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" class="sponser_img"></div> 
+
+
+                <div class="sponser_content"><img src="https://cm-commerce.com/wp-content/themes/receiptful/assets/img/opal/logos/shopify-grey.png" class="sponser_img"></div>
+                
+                
+                <div class="sponser_content"><img src="https://sciconsports.com/media/PaymentMethodsLogos/PayPal.png" class="sponser_img"></div> 
+
+
+                <div class="sponser_content"><img src="https://png.pngitem.com/pimgs/s/146-1461735_slack-hd-png-download.png" class="sponser_img"></div> 
+            </div>
+        </section>
+
+        <!-- FOOTER  -->
+
+        <section class="footer_section">
+            <div class="footer_container container">
+                <div class="footer_content">
+                    <div class="footer_data">
+                        <h3 class="footer_title">Travel</h3>
+                        <p class="footer_description">Travel you choose the <br>
+                            destination, we offer you the <br>
+                            experience.</p>
+                            
+                    <div class="footer_social_icon">
+                        <a href="#" class="footer_social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        
+                        <a href="#" class="footer_social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        
+                        <a href="#" class="footer_social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        
+                        <a href="#" class="footer_social">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="footer_data">
+                        <h3 class="footer_title">About</h3>
+                        <ul>
+                            <li class="footer_item">
+                                <a href="#" class="footer_link">About us</a> </li>
+                            
+                            <li class="footer_item"><a href="#" class="footer_link">
+                                features
+                            </a> </li>
+                            
+                            <li class="footer_item"> <a href="#" class="footer_link">New & blog</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer_data">
+                        <h3 class="footer_title">Company</h3>
+                        <ul>
+                            <li class="footer_item">
+                                <a href="#" class="footer_link">About us</a> </li>
+                            
+                            <li class="footer_item"><a href="#" class="footer_link">
+                                features
+                            </a> </li>
+                            
+                            <li class="footer_item"> <a href="#" class="footer_link">New & blog</a> </li>
+                        </ul>
+                    </div>
+                    <div class="footer_data">
+                        <h3 class="footer_title">Support</h3>
+                        <ul>
+                            <li class="footer_item">
+                                <a href="#" class="footer_link">About us</a> </li>
+                            
+                            <li class="footer_item"><a href="#" class="footer_link">
+                                features
+                            </a> </li>
+                            
+                            <li class="footer_item"> <a href="#" class="footer_link">New & blog</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_right">
+
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
